@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en" dir="ltr">
+  <head>
+    <meta charset="utf-8">
+    <title></title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/font-awesome/4.7.0/css/font-awesome.min.css">
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/jquery.magnific-popup.min.js"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/magnific-popup.js/1.1.0/magnific-popup.min.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+  </head>
+  <body>
+
+    <div class="gallery-section">
+      <div class="inner-width">
+        <h1>CREATIVE GALLERY</h1>
+        <div class="border"></div>
+        <br><br>
+        <script src="https://kit.fontawesome.com/72802377fb.js" crossorigin="anonymous"></script>
+        <div class="search-box">
+            <input class="search-txt" id="searchbar" onkeyup="search_animal()" type="text" name="" placeholder="Explore our Collections">
+            <a class="search-btn" href="#">
+            <i class="fas fa-search"  onclick="search_animal()"></i>
+            </a>
+        </div>
+      
+        <div class="gallery">
+
+          <span  class="image">
+            <img src="C:\Users\User\Desktop\gallery web page\img\1.png" alt="bottle" width="100" height="100">   
+            <button class="btn"><i class="fa fa-heart" id="heart" onclick="myfunction()"></i></button>
+            <button class="btn"><i class="fa fa-comment" aria-hidden="true"></i></button>
+            <a href="C:\Users\User\Desktop\gallery web page\img\1.png" download><button class="btn"><i class="fa fa-download" aria-hidden="true"></i></button></span>
+
+          <a href="3.png" class="image">
+            <img src="3.png" alt="">
+            <button class="btn"><i class="fa fa-heart" id="heart" onclick="myfunction()"></i></button>
+            <button class="btn"><i class="fa fa-comment" aria-hidden="true"></i></button>
+            <button class="btn"><i class="fa fa-download" aria-hidden="true"></i></button>
+          </a>
+
+          <a href="4.png" class="image">
+            <img src="4.png" alt="">
+            <button class="btn"><i class="fa fa-heart" id="heart" onclick="myfunction()"></i></button>
+            <button class="btn"><i class="fa fa-comment" aria-hidden="true"></i></button>
+            <button class="btn"><i class="fa fa-download" aria-hidden="true"></i></button>
+          </a>
+
+          <a href="5.png" class="image"> 
+            <img src="5.png" alt="">
+            <button class="btn"><i class="fa fa-heart" id="heart" onclick="myfunction()"></i></button>
+            <button class="btn"><i class="fa fa-comment" aria-hidden="true"></i></button>
+            <button class="btn"><i class="fa fa-download" aria-hidden="true"></i></button>
+          </a>
+
+          <a href="6.png" class="image">
+            <img src="6.png" alt="">
+            <button class="btn"><i class="fa fa-heart" id="heart" onclick="myfunction()"></i></button>
+            <button class="btn"><i class="fa fa-comment" aria-hidden="true"></i></button>
+            <button class="btn"><i class="fa fa-download" aria-hidden="true"></i></button>
+          </a>
+
+          <a href="7.png" class="image">
+            <img src="7.png" alt="">
+            <button class="btn"><i class="fa fa-heart" id="heart" onclick="myfunction()"></i></button>
+            <button class="btn"><i class="fa fa-comment" aria-hidden="true"></i></button>
+            <button class="btn"><i class="fa fa-download" aria-hidden="true"></i></button>
+          </a>
+
+          <a href="8.png" class="image">
+            <img src="8.png" alt="">
+            <button class="btn"><i class="fa fa-heart" id="heart" onclick="myfunction()"></i></button>
+            <button class="btn"><i class="fa fa-comment" aria-hidden="true"></i></button>
+            <button class="btn"><i class="fa fa-download" aria-hidden="true"></i></button>
+          </a>
+
+        </div>
+      </div>
+    </div>
+
+
+  <script>
+    $(".gallery").magnificPopup({
+      delegate: 'span',
+      type: 'image',
+      gallery:{
+        enabled: true
+      }
+    });
+    function search_animal() { 
+  input=input.toLowerCase(); 
+  let input = document.getElementById('searchbar').value 
+  let x = document.getElementsByClassName('image'); 
+  
+  for (i = 0; i < x.length; i++) { 
+    if (!x[i].innerHTML.toLowerCase().includes(input)) { 
+      x[i].style.display="none";
+           
+    } 
+    else { 
+      x[i].style.display="list-item";    
+    } 
+  } 
+} 
+  </script>
+
+  </body>
+</html>
