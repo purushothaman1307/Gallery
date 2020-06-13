@@ -1,0 +1,166 @@
+*{
+    margin: 0;
+    padding: 0;
+    font-family: "montserrat",sans-serif;
+    box-sizing: border-box;
+}
+body{
+    background-color: purple;
+    width: 100%;
+    
+  }
+ 
+  .gallery-section{
+    width: 100%;
+    padding: 60px 0;
+    background: linear-gradient(50deg, #fa7c30 40%, rgba(0, 0, 0, 0) 50%);
+  }
+ 
+  .inner-width{
+    width: 100%;
+    max-width: 1200px;
+    margin: auto;
+    padding: 0 20px;
+  }
+ 
+  .gallery-section h1{
+    text-align: center;
+    text-transform: uppercase;
+    color: #333;
+  }
+ 
+  .border{
+    width: 180px;
+    height: 4px;
+    background: #333;
+    margin: 60px auto;
+  }
+ 
+  .gallery-section .gallery{
+    display: flex;
+    flex-wrap: wrap-reverse;
+    justify-content: center;
+  }
+ 
+  .gallery-section .image{
+    flex: 25%;
+    overflow: hidden;
+    cursor: pointer;
+  }
+ 
+  .gallery-section .image img{
+    width: 100%;
+    height: 100%;
+    transition: 1.5s;
+  }
+  .gallery-section .image:hover img{
+    transform: scale(1.2) rotate(360deg);
+    
+  }
+ 
+ 
+  @media screen and (max-width:960px) {
+    .gallery-section .image{
+      flex: 33.33%;
+    }
+  }
+ 
+  @media screen and (max-width:768px) {
+    .gallery-section .image{
+      flex: 50%;
+    }
+  }
+ 
+  @media screen and (max-width:480px) {
+    .gallery-section .image{
+      flex: 100%;
+    }
+  }
+
+
+/* When the input field gets focus, 
+    change its width to 100% */
+button{
+    padding :15px;
+    border-radius: 50px;   
+    font-size: 18px; 
+} 
+ button:hover{
+    color: lightgreen;
+}
+
+.image:hover .btn:checked{
+  flex: 25%;
+  overflow: hidden;
+  cursor: pointer;
+}
+ .image:hover .btn {
+     position: relative;
+     bottom: 85px;
+     left : 90px;
+    transform: translate(-50%, -50%);
+    background-color: #555;
+    color: white;
+    font-size: 16px;
+    padding: 12px 24px;
+    border: none;
+    cursor: pointer;
+    border-radius: 5px;
+  }
+
+  .search-box{
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    margin-top: -130px;
+    transform: translate(-50%,-50%);
+    background: #2f3640;
+    height: 50px;
+    border-radius: 40px;
+    padding: 10px;
+
+}
+.search-box:hover > .search-txt{
+    width: 400px;
+    padding: 0;
+}
+.search-box:hover > .search-btn{
+    background: white;
+}
+.search-btn{
+    color: #e84118;
+    float: right;
+    margin-top: -8px;
+    height: 45px;
+    width: 50px;
+    border-radius: 50%;
+    background: #2f3640;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: 0.4s;
+}
+.search-txt{
+    border: none;
+    background: none;
+    outline: none;
+    float: center;
+    padding: 0px;
+    color: white;
+    font-size: 20px;
+    transition: 0.4s;
+    line-height: 5px;
+    width: 0px;
+
+}
+
+
+
+#heart {
+  color: white;  
+  font-size: 25px;
+}
+
+#heart.red {
+  color: red;
+}
